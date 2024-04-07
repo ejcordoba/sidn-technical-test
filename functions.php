@@ -11,3 +11,8 @@ function scripts()
     wp_enqueue_script('app');
 }
 add_action('wp_enqueue_scripts','scripts');
+
+function wpb_add_google_fonts(){
+    wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap', false );
+}
+add_action('wp_enqueue_scripts','wpb_add_google_fonts');

@@ -7,7 +7,33 @@
   \********************/
 /***/ (() => {
 
+document.addEventListener("DOMContentLoaded", function () {
+  var postsContainer = document.getElementById('posts-container');
+  var loadMoreButton = document.getElementById('load-more');
+  var page = 1;
+  var perPage = 6; // Number of posts to load initially
+  var restUrl = loadMoreButton.getAttribute('data-rest-url');
+  loadMoreButton.addEventListener('click', function () {
+    page++;
+    fetchPosts(page);
+  });
+  function fetchPosts(page) {
+    fetch(restUrl + '?page=' + page + '&per_page=' + perPage).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      data.forEach(function (post) {
+        var postElement = document.createElement('div');
+        postElement.innerHTML = "\n                        <h2>".concat(post.title.rendered, "</h2>\n                        <p>").concat(post.content.rendered, "</p>\n                    ");
+        postsContainer.appendChild(postElement);
+      });
+    })["catch"](function (error) {
+      return console.error('Error fetching posts:', error);
+    });
+  }
 
+  // Initial load
+  fetchPosts(page);
+});
 
 /***/ }),
 

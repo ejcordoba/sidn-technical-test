@@ -1,0 +1,2 @@
+- SASS functionallity added through Laravel Mix
+- Easy access to edit on admin panel (Including ACF) allowed by plugin Classic Editor

@@ -111,34 +111,3 @@ line-height: normal;
     }
   }
 }
-
-#posts-wrapper {
-  position: relative;
-}
-#posts-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust as needed */
-  position: absolute;
-  bottom: 10%;
-}
-
-.card {
-  width: calc(
-    33.33% - 20px
-  ); /* Adjust the width based on the number of cards you want per row */
-  margin-bottom: 20px; /* Adjust spacing between cards */
-  box-sizing: border-box;
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    width: calc(50% - 20px); /* Adjust the width for smaller screens */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card {
-    width: calc(100% - 20px); /* Adjust the width for even smaller screens */
-  }
-}

@@ -16,15 +16,28 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 data.forEach(post => {
                     var postElement = document.createElement('div');
+                    postElement.classList.add('card');
                     postElement.innerHTML = `
-                        <h2>${post.title.rendered}</h2>
-                        <p>${post.content.rendered}</p>
+                        <div class="card-container">
+                            <div class="card-title">
+                                <img class="image-2" src="image-211.png" />
+                                <div class="spec">${post.title.rendered}</div>
+                            </div>
+                            <div class="technical-specifications-monitoring-and-tracking-system">
+                                ${post.content.rendered}
+                            </div>
+                            <div class="cta">
+                                <div class="details">Details</div>
+                                <img class="vector-812" src="vector-811.svg" />
+                            </div>
+                        </div>
                     `;
                     postsContainer.appendChild(postElement);
                 });
             })
             .catch(error => console.error('Error fetching posts:', error));
     }
+    
 
     // Initial load
     fetchPosts(page);

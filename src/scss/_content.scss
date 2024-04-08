@@ -1,6 +1,14 @@
+@import 'sections/call-to-action';
+@import 'sections/description';
+@import 'sections/posts-section';
+
 .content {
     min-height: 1000px;
     width:100%;
     background: $light;
     padding: 2rem 0;
+}
+.main-content,
+.main-content * {
+  box-sizing: border-box;
 }

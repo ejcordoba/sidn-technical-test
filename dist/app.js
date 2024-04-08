@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(function (data) {
       data.forEach(function (post) {
         var postElement = document.createElement('div');
-        postElement.innerHTML = "\n                        <h2>".concat(post.title.rendered, "</h2>\n                        <p>").concat(post.content.rendered, "</p>\n                    ");
+        postElement.classList.add('card');
+        postElement.innerHTML = "\n                        <div class=\"card-container\">\n                            <div class=\"card-title\">\n                                <img class=\"image-2\" src=\"image-211.png\" />\n                                <div class=\"spec\">".concat(post.title.rendered, "</div>\n                            </div>\n                            <div class=\"technical-specifications-monitoring-and-tracking-system\">\n                                ").concat(post.content.rendered, "\n                            </div>\n                            <div class=\"cta\">\n                                <div class=\"details\">Details</div>\n                                <img class=\"vector-812\" src=\"vector-811.svg\" />\n                            </div>\n                        </div>\n                    ");
         postsContainer.appendChild(postElement);
       });
     })["catch"](function (error) {

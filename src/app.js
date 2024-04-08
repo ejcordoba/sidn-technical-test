@@ -1,44 +1,70 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var postsContainer = document.getElementById('posts-container');
-    var loadMoreButton = document.getElementById('load-more');
+document.addEventListener('DOMContentLoaded', function() {
     var page = 1;
-    var perPage = 6; // Number of posts to load initially
-    var restUrl = loadMoreButton.getAttribute('data-rest-url');
+    var canLoad = true;
+    var container = document.querySelector('.posts-container');
+    var loadMoreButton = document.getElementById('load-more-posts');
 
-    loadMoreButton.addEventListener('click', function() {
-        page++;
-        fetchPosts(page);
-    });
-
-    function fetchPosts(page) {
-        fetch(restUrl + '?page=' + page + '&per_page=' + perPage)
+    function loadInitialPosts() {
+        fetch(custom_script_vars.rest_url + '?per_page=8&page=' + page)
             .then(response => response.json())
-            .then(data => {
-                data.forEach(post => {
-                    var postElement = document.createElement('div');
-                    postElement.classList.add('card');
-                    postElement.innerHTML = `
-                        <div class="card-container">
-                            <div class="card-title">
-                                <img class="image-2" src="image-211.png" />
-                                <div class="spec">${post.title.rendered}</div>
+            .then(posts => {
+                if (posts.length > 0) {
+                    posts.forEach(post => {
+                        container.insertAdjacentHTML('beforeend', `
+                            <div class="card">
+                                <div class="card-header">
+                                    ${post.featured_media ? `<img class="card-img" src="${post.featured_media}" alt="${post.title.rendered}">` : ''}
+                                    <div class="card-title">${post.title.rendered}</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-description">${post.excerpt.rendered}</div>
+                                    <div class="details-button-wrapper">
+                                        <a href="${post.link}" class="details-button">Details -></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="technical-specifications-monitoring-and-tracking-system">
-                                ${post.content.rendered}
-                            </div>
-                            <div class="cta">
-                                <div class="details">Details</div>
-                                <img class="vector-812" src="vector-811.svg" />
-                            </div>
-                        </div>
-                    `;
-                    postsContainer.appendChild(postElement);
-                });
+                        `);
+                    });
+                    canLoad = true;
+                } else {
+                    loadMoreButton.style.display = 'none';
+                }
             })
             .catch(error => console.error('Error fetching posts:', error));
     }
-    
 
-    // Initial load
-    fetchPosts(page);
+    loadInitialPosts();
+
+    loadMoreButton.addEventListener('click', function() {
+        if (canLoad) {
+            canLoad = false;
+            page++;
+            fetch(custom_script_vars.rest_url + '?per_page=4&page=' + page)
+                .then(response => response.json())
+                .then(posts => {
+                    if (posts.length > 0) {
+                        posts.forEach(post => {
+                            container.insertAdjacentHTML('beforeend', `
+                                <div class="card">
+                                    <div class="card-header">
+                                        ${post.featured_media ? `<img class="card-img" src="${post.featured_media}" alt="${post.title.rendered}">` : ''}
+                                        <div class="card-title">${post.title.rendered}</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-description">${post.excerpt.rendered}</div>
+                                        <div class="details-button-wrapper">
+                                            <a href="${post.link}" class="details-button">Details -></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `);
+                        });
+                        canLoad = true;
+                    } else {
+                        loadMoreButton.style.display = 'none';
+                    }
+                })
+                .catch(error => console.error('Error fetching posts:', error));
+        }
+    });
 });

@@ -212,6 +212,9 @@
                 </div>                
             </div>
         </div>
+        <div class="load-more-button-row">
+            <button class="btn btn-primary" id="load-more-posts">Load More</button>
+        </div>
     </div>
 </div>
 <?php get_footer(); ?>

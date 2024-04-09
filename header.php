@@ -9,4 +9,4 @@
     
 </head>
 <body>
-    <header><img src="<?php echo get_template_directory_uri(); ?>/src/img/header-logo.png" /></header>
+    <header><img src="<?php the_field('header_logo')?>" /></header>

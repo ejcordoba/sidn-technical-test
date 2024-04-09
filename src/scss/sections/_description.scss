@@ -15,7 +15,7 @@
       .numbers {
         color: #194350;
         /* Heading Caps / H7 */
-        font-family: "Josefin Sans";
+        font-family: 'Josefin Sans', 'sans-serif';
         font-size: 27px;
         font-style: italic;
         font-weight: 700;
@@ -33,7 +33,7 @@
     }
     .cruelty-free {
       color: #194350;
-      font-family: "Josefin Sans";
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: 105px;
       font-style: normal;
       font-weight: 700;
@@ -43,11 +43,7 @@
     .development {
       color: transparent;
       text-align: left;
-      font-family: var(
-        --heading-h2-font-family,
-        "JosefinSans-Bold",
-        sans-serif
-      );
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: var(--heading-h2-font-size, 6.5625rem);
       line-height: var(--heading-h2-line-height);
       font-weight: var(--heading-h2-font-weight, 700);
@@ -64,7 +60,7 @@
       text-align: center;
       color: #194350;
       /* Heading / H8 */
-      font-family: "Josefin Sans";
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: 21px;
       font-style: normal;
       font-weight: 600;
@@ -91,7 +87,7 @@
     .description-bottom-title {
       color: #194350;
       /* Heading / H5 */
-      font-family: "Josefin Sans";
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: 47px;
       font-style: normal;
       font-weight: 700;

@@ -3,16 +3,10 @@
     <div class="call-to-action-container">
         <div class="call-to-action-left">
             <div class="call-to-action-title">
-                <div class="buy-poison">Buy poison.</div>
-                <div class="trust-us">Trust us.</div>
+                <div class="buy-poison"><?php the_field('cta_title1')?></div>
+                <div class="trust-us"><?php the_field('cta_title2')?></div>
             </div>
-            <div class="call-to-action-description">
-                <div class="your-children-are-safe-why-would-a-company-lie-to-you-we-are-your-friends-pal-buy-poison-today-and-we-grant-you-total-transparency-and-full-refunds-if-you-are-not-satisfied-with-our-service-we-care-about-you">
-            Your children are safe, why would a company lie to you? We are your
-            friends pal. Buy poison today and we grant you total transparency and full
-            refunds* if you are not satisfied with our service. We care about you ♥
-                </div>
-            </div>
+            <div class="call-to-action-description"><?php the_field('cta_description')?></div>
             <div class="call-to-action-button">                
                 Drink now!
                 <div class="rectangle-shape-right"></div>
@@ -23,50 +17,37 @@
             </div>
         </div>
         <div class="call-to-action-right">
-            <img class="call-to-action-image" src="<?php echo get_template_directory_uri(); ?>/src/img/poison.png" />
-            <div class="call-to-action-notice">
-                <div class="we-keep-the-right-to-deny-any-refunds-on-our-own-terms-total-responsability-is-up-to-the-final-user-buying-poison">
-                    *We keep the right to deny any refunds on our own terms. Total
-                    responsability is up to the final user buying poison.
-                </div>
-            </div>
+            <img class="call-to-action-image" src="<?php the_field('cta_image')?>" />
+            <div class="call-to-action-notice"><?php the_field('cta_text_under_image')?></div>
         </div>        
     </div>
     <div class="description-container">
         <div class="description-top">
             <div class="description-shape-wrapper">
-                <div class="numbers">03 - 05</div>
+                <div class="numbers"><?php the_field('desc_pre-title')?></div>
                 <div class="description-shape"></div>
             </div>
-            <div class="cruelty-free">Cruelty free</div>
-            <div class="development">Development</div>
-            <div class="description-callout">
-              Except for the human subjects...
-            </div>
+            <div class="cruelty-free"><?php the_field('desc_title1')?></div>
+            <div class="development"><?php the_field('desc_title2')?></div>
+            <div class="description-callout"><?php the_field('desc_callout')?></div>
         </div>
         <div class="description-bottom">
             <div class="description-bottom-left">
-                <div class="description-bottom-title">Look, a cute puppy</div>
-                <div class="description-text">
-                    Here on POISON we know that cute small animals go viral and get the youth’s
-                    attention. Take a good look at the dog here and think carefully if you
-                    emphatize with this company. We are so cool and quirky hehe uwu. Go right
-                    now to that form and buy the damn poison already. We are running out of
-                    ideas to trick you people into buying our product.
-                </div>
+                <div class="description-bottom-title"><?php the_field('desc_bottom_title')?></div>
+                <div class="description-text"><?php the_field('desc_text')?></div>
                 <div class="description-bottom-shape"></div>
             </div>
             <div class="description-bottom-right">
-                <img class="rectangle-26" src="<?php echo get_template_directory_uri(); ?>/src/img/dolphin.png" />
+                <img class="rectangle-26" src="<?php the_field('desc_image')?>" />
             </div>
 
         </div> 
     </div>
     <div class="posts-section-container">
         <div class="posts-title">
-            <div class="numbers">02 - 05</div>
-            <div class="our">Our</div>
-            <div class="flavours">Flavours</div>
+            <div class="numbers"><?php the_field('posts_pre-title')?></div>
+            <div class="our"><?php the_field('posts_title1')?></div>
+            <div class="flavours"><?php the_field('posts_title2')?></div>
         </div>
         <div class="posts-container">
         </div>

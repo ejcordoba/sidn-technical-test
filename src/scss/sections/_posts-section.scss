@@ -15,7 +15,7 @@
       color: var(--Blanco, #fff);
 
       /* Heading Caps / H7 */
-      font-family: "Josefin Sans";
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: 27px;
       font-style: italic;
       font-weight: 700;
@@ -26,9 +26,7 @@
     .our {
       color: var(--Blanco, #fff);
       text-align: right;
-
-      /* Heading / H2 */
-      font-family: "Josefin Sans";
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: 105px;
       font-style: normal;
       font-weight: 700;
@@ -38,7 +36,7 @@
       text-align: right;
       -webkit-text-stroke: 0.125rem #fff;
       color: transparent;
-      font-family: "Josefin Sans";
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: 105px;
       font-style: normal;
       font-weight: 700;
@@ -65,7 +63,7 @@
           align-items: end;
           padding-left: 10px;
           color: #194350;
-          font-family: "Josefin Sans";
+          font-family: 'Josefin Sans', 'sans-serif';
           font-size: 21px;
           font-style: normal;
           font-weight: 700;
@@ -77,8 +75,6 @@
       .card-body {
         .card-description {
           color: #194350;
-  
-          /* Body / Regular */
           font-family: Lato;
           font-size: 18px;
           font-style: normal;

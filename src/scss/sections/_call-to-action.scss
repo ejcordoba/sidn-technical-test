@@ -2,7 +2,9 @@
   display: flex;
   background: $primary-color;
   padding: 0 50px;
-
+  @media (max-width: $layout-breakpoint-mobile) {
+    padding: 0 10px;
+  }
   .call-to-action-left {
     display: flex;
     flex-direction: column;
@@ -12,15 +14,14 @@
       .buy-poison {
         color: $white;
         text-align: left;
-        font-family: var(
-          --heading-h1-font-family,
-          "JosefinSans-BoldItalic",
-          sans-serif
-        );
+        font-family: 'Josefin Sans', 'sans-serif';
         font-size: 120px;
         line-height: var(--heading-h1-line-height);
         font-weight: var(--heading-h1-font-weight, 700);
         font-style: var(--heading-h1-font-style, italic);
+        @media (max-width: $layout-breakpoint-mobile) {
+         font-size: 58px;
+        }
       }
       .trust-us {
         position: relative;
@@ -28,16 +29,17 @@
         left: 2rem;
         color: transparent;
         text-align: left;
-        font-family: var(
-          --heading-h1-font-family,
-          "JosefinSans-BoldItalic",
-          sans-serif
-        );
+        font-family: 'Josefin Sans', 'sans-serif';
         font-size: 120px;
         line-height: var(--heading-h1-line-height);
         font-weight: var(--heading-h1-font-weight, 700);
         font-style: var(--heading-h1-font-style, italic);
         -webkit-text-stroke: 0.125rem #ff8882;
+        @media (max-width: $layout-breakpoint-mobile) {
+          font-size: 58.507px;
+          top: -55px;
+          left: 20px;
+         }
       }
     }
     .call-to-action-description {
@@ -48,6 +50,10 @@
       font-weight: 300;
       line-height: 146%;
       opacity: 0.7;
+      @media (max-width: $layout-breakpoint-mobile) {
+        width: 345px;
+        margin: 0 15px;
+       }
     }
     .call-to-action-button {
       display: inline-flex;
@@ -63,15 +69,14 @@
       margin-bottom: 186px;
       color: #194350;
       text-align: center;
-      font-family: var(
-        --heading-caps-h8-font-family,
-        "JosefinSans-Bold",
-        sans-serif
-      );
+      font-family: 'Josefin Sans', 'sans-serif';
       font-size: var(--heading-caps-h8-font-size, 1.3125rem);
       line-height: var(--heading-caps-h8-line-height);
       font-weight: var(--heading-caps-h8-font-weight, 700);
       text-transform: uppercase;
+      @media (max-width: $layout-breakpoint-mobile) {
+        margin: 64px auto ;
+       }
     }
     .rectangle-shape-right {
       background: rgba(255, 255, 255, 0.8);

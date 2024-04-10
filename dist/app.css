@@ -11607,10 +11607,14 @@ header {
 .description-container {
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
   width: 100%;
   height: auto;
   padding: 70px 165px;
+}
+@media (max-width: 375px) {
+  .description-container {
+    padding: 86px 15px 121px 15px;
+  }
 }
 .description-container .description-top {
   display: flex;
@@ -11643,6 +11647,13 @@ header {
   line-height: normal;
   padding-left: 15px;
 }
+@media (max-width: 375px) {
+  .description-container .description-top .cruelty-free {
+    font-size: 57.179px;
+    padding-left: 0;
+    padding-top: 28.26px;
+  }
+}
 .description-container .description-top .development {
   color: transparent;
   text-align: left;
@@ -11658,6 +11669,13 @@ header {
   padding-left: 60px;
   top: -80px;
 }
+@media (max-width: 375px) {
+  .description-container .description-top .development {
+    font-size: 57.179px;
+    padding-left: 19.16px;
+    top: -40px;
+  }
+}
 .description-container .description-top .description-callout {
   width: 100%;
   text-align: center;
@@ -11668,12 +11686,28 @@ header {
   font-weight: 600;
   line-height: 109.5%; /* 22.995px */
 }
+@media (max-width: 375px) {
+  .description-container .description-top .description-callout {
+    width: 345px;
+  }
+}
 .description-container .description-bottom {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 420px;
   margin-top: 137.07px;
+}
+@media (max-width: 375px) {
+  .description-container .description-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media (max-width: 375px) {
+  .description-container .description-bottom .description-bottom-left {
+    height: 280px;
+  }
 }
 .description-container .description-bottom .description-bottom-left .description-bottom-shape {
   width: 625px;
@@ -11685,6 +11719,12 @@ header {
   left: 190px;
   bottom: 270px;
 }
+@media (max-width: 375px) {
+  .description-container .description-bottom .description-bottom-left .description-bottom-shape {
+    width: 170px;
+    height: 195px;
+  }
+}
 .description-container .description-bottom .description-bottom-title {
   color: #194350;
   font-family: "Josefin Sans", "sans-serif";
@@ -11692,6 +11732,11 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 375px) {
+  .description-container .description-bottom .description-bottom-title {
+    font-size: 35px;
+  }
 }
 .description-container .description-bottom .description-text {
   width: 445px;
@@ -11703,6 +11748,17 @@ header {
   font-weight: 400;
   line-height: normal;
   opacity: 0.7;
+}
+@media (max-width: 375px) {
+  .description-container .description-bottom .description-text {
+    width: 345px;
+  }
+}
+@media (max-width: 375px) {
+  .description-container .description-bottom .description-bottom-right .description-bottom-right-image {
+    width: 345px;
+    border-radius: 10px;
+  }
 }
 
 .posts-section-container {

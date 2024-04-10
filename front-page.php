@@ -40,7 +40,7 @@
                 <div class="description-bottom-shape"></div>
             </div>
             <div class="description-bottom-right">
-                <img class="rectangle-26" src="<?php the_field('desc_image')?>" />
+                <img class="description-bottom-right-image" src="<?php the_field('desc_image')?>" />
             </div>
 
         </div> 

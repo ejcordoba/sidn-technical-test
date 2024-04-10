@@ -2,9 +2,10 @@
   background: $primary-color;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 14.1875rem;
+  padding: 67px 134px;
   margin-top: auto;
   @media (max-width: $layout-breakpoint-mobile) {
     height: 10.1875rem;
@@ -35,7 +36,6 @@
     font-style: italic;
     font-weight: 400;
     line-height: normal;
-    padding-right: 166px;
     opacity: 0.5;
     @media (max-width: $layout-breakpoint-mobile) {
       padding-right: 30px;

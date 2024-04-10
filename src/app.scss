@@ -1,33 +1,33 @@
 // Branding colours
 $primary-color: #194350;
-$secondary-color:#FF8882;
-$tertiary-color:#FFC2B4;
-$quaternary-color:#9DBEB9;
+$secondary-color: #ff8882;
+$tertiary-color: #ffc2b4;
+$quaternary-color: #9dbeb9;
+
 // Other colours
-$white: #FFF;
+$white: #fff;
+
 // Override bootstrap values
 // https://getbootstrap.com/docs/5.3/customize/sass/#modify-map
 $theme-colors: (
-    "primary": $primary-color,
-    "secondary": $tertiary-color
+  "primary": $primary-color,
+  "secondary": $tertiary-color,
 );
+
 // Responsive breakpoint
-$layout-breakpoint-mobile:375px;
+$layout-breakpoint-mobile: 375px;
 
-@import 'node_modules/bootstrap/scss/bootstrap'; // To normalize project styles
+@import "node_modules/bootstrap/scss/bootstrap"; // To normalize project styles
 
-@import 'scss/header';
-@import 'scss/content';
-@import 'scss/footer';
-
+@import "scss/header";
+@import "scss/content";
+@import "scss/footer";
 
 body {
   min-height: 100vh;
-  display:flex;
+  display: flex;
   flex-direction: column;
   @media (max-width: $layout-breakpoint-mobile) {
     width: max-content;
   }
 }
-
-  

@@ -14,13 +14,13 @@
       .buy-poison {
         color: $white;
         text-align: left;
-        font-family: 'Josefin Sans', 'sans-serif';
+        font-family: "Josefin Sans", "sans-serif";
         font-size: 120px;
         line-height: var(--heading-h1-line-height);
         font-weight: var(--heading-h1-font-weight, 700);
         font-style: var(--heading-h1-font-style, italic);
         @media (max-width: $layout-breakpoint-mobile) {
-         font-size: 58px;
+          font-size: 58px;
         }
       }
       .trust-us {
@@ -29,7 +29,7 @@
         left: 2rem;
         color: transparent;
         text-align: left;
-        font-family: 'Josefin Sans', 'sans-serif';
+        font-family: "Josefin Sans", "sans-serif";
         font-size: 120px;
         line-height: var(--heading-h1-line-height);
         font-weight: var(--heading-h1-font-weight, 700);
@@ -39,7 +39,7 @@
           font-size: 58.507px;
           top: -55px;
           left: 20px;
-         }
+        }
       }
     }
     .call-to-action-description {
@@ -53,7 +53,7 @@
       @media (max-width: $layout-breakpoint-mobile) {
         width: 345px;
         margin: 0 15px;
-       }
+      }
     }
     .call-to-action-button {
       display: inline-flex;
@@ -69,14 +69,14 @@
       margin-bottom: 186px;
       color: #194350;
       text-align: center;
-      font-family: 'Josefin Sans', 'sans-serif';
+      font-family: "Josefin Sans", "sans-serif";
       font-size: var(--heading-caps-h8-font-size, 1.3125rem);
       line-height: var(--heading-caps-h8-line-height);
       font-weight: var(--heading-caps-h8-font-weight, 700);
       text-transform: uppercase;
       @media (max-width: $layout-breakpoint-mobile) {
-        margin: 64px auto ;
-       }
+        margin: 64px auto;
+      }
     }
     .rectangle-shape-right {
       background: rgba(255, 255, 255, 0.8);
@@ -103,12 +103,10 @@
       top: 0.3125rem;
     }
   }
-
   .call-to-action-scrolldown {
     margin-bottom: 25px;
   }
 }
-
 .call-to-action-right {
   display: flex;
   flex-direction: column;
@@ -118,11 +116,9 @@
     height: 33.75rem;
     object-fit: cover;
   }
-
   .call-to-action-notice {
     color: $white;
     text-align: right;
-    /* Small / Regular */
     font-family: Lato;
     font-size: 12px;
     font-style: normal;

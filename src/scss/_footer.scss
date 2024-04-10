@@ -1,45 +1,44 @@
 .footer {
-    background: $primary-color;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 14.1875rem;
-    margin-top: auto;
+  background: $primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 14.1875rem;
+  margin-top: auto;
+  @media (max-width: $layout-breakpoint-mobile) {
+    height: 10.1875rem;
+  }
+  .footer-logo {
+    padding-left: 15px;
     @media (max-width: $layout-breakpoint-mobile) {
-        height: 10.1875rem;
+      padding-left: 30px;
     }
-    .footer-logo {
-        padding-left: 15px;
-        @media (max-width: $layout-breakpoint-mobile) {
-            padding-left:30px;
-        }        
+  }
+  .footer-separator {
+    width: 1px;
+    height: 137.955px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: $white;
+    opacity: 0.5;
+    margin-left: 33%;
+    @media (max-width: $layout-breakpoint-mobile) {
+      margin-left: 10%;
     }
-
-    .footer-separator {
-        width: 1px;
-        height: 137.955px;
-        flex-shrink: 0;
-        stroke-width: 1px;
-        stroke: $white;
-        opacity: 0.5;
-        margin-left:33%;
-        @media (max-width: $layout-breakpoint-mobile) {
-            margin-left:10%;
-        }
+  }
+  .legal-notice-legal-information {
+    color: $white;
+    text-align: right;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding-right: 166px;
+    opacity: 0.5;
+    @media (max-width: $layout-breakpoint-mobile) {
+      padding-right: 30px;
     }
-    .legal-notice-legal-information {
-        color: $white;
-        text-align: right;        
-        font-family: Lato;
-        font-size: 16px;
-        font-style: italic;
-        font-weight: 400;
-        line-height: normal;
-        padding-right: 166px;
-        opacity: 0.5;
-        @media (max-width: $layout-breakpoint-mobile) {
-            padding-right: 30px;
-        }
-    }
+  }
 }

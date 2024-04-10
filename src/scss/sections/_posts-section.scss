@@ -12,10 +12,8 @@
     justify-content: center;
     align-items: flex-end;
     .numbers {
-      color: var(--Blanco, #fff);
-
-      /* Heading Caps / H7 */
-      font-family: 'Josefin Sans', 'sans-serif';
+      color: $white;
+      font-family: "Josefin Sans", "sans-serif";
       font-size: 27px;
       font-style: italic;
       font-weight: 700;
@@ -24,9 +22,9 @@
       text-transform: uppercase;
     }
     .our {
-      color: var(--Blanco, #fff);
+      color: $white;
       text-align: right;
-      font-family: 'Josefin Sans', 'sans-serif';
+      font-family: "Josefin Sans", "sans-serif";
       font-size: 105px;
       font-style: normal;
       font-weight: 700;
@@ -36,7 +34,7 @@
       text-align: right;
       -webkit-text-stroke: 0.125rem #fff;
       color: transparent;
-      font-family: 'Josefin Sans', 'sans-serif';
+      font-family: "Josefin Sans", "sans-serif";
       font-size: 105px;
       font-style: normal;
       font-weight: 700;
@@ -48,7 +46,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     grid-gap: 1rem;
-    /* align-items: center; */
     .card {
       width: auto;
       .card-header {
@@ -63,7 +60,7 @@
           align-items: end;
           padding-left: 10px;
           color: #194350;
-          font-family: 'Josefin Sans', 'sans-serif';
+          font-family: "Josefin Sans", "sans-serif";
           font-size: 21px;
           font-style: normal;
           font-weight: 700;
@@ -92,10 +89,8 @@
             gap: 9px;
             border-radius: 55px;
             background: #ff8882;
-            color: var(--Blanco, #fff);
+            color: $white;
             text-align: center;
-  
-            /* Body / Bold */
             font-family: Lato;
             font-size: 18px;
             font-style: normal;
@@ -107,7 +102,7 @@
     }
   }
   .load-more-button-row {
-    display:flex;
+    display: flex;
     flex-direction: row;
     margin: 2rem auto;
     align-items: center;

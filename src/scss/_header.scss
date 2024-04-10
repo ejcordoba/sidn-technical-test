@@ -1,12 +1,12 @@
 header {
-    background: $primary-color;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 13px 0;
-    @media (max-width: $layout-breakpoint-mobile) {
-        width: 100vw;
-    }
+  background: $primary-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 0;
+  @media (max-width: $layout-breakpoint-mobile) {
+    width: 100vw;
+  }
 }

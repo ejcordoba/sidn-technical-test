@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var page = 1;
     var canLoad = true;
     var container = document.querySelector('.posts-container');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadInitialPosts();
 
-    loadMoreButton.addEventListener('click', function() {
+    loadMoreButton.addEventListener('click', function () {
         if (canLoad) {
             canLoad = false;
             page++;

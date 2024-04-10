@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (canLoad) {
             canLoad = false;
             page++;
-            fetch(custom_script_vars.rest_url + '?per_page=4&page=' + page)
+            fetch(custom_script_vars.rest_url + '?per_page=8&page=' + page)
                 .then(response => response.json())
                 .then(posts => {
                     if (posts.length > 0) {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (canLoad) {
             canLoad = false;
             page++;
-            fetch(custom_script_vars.rest_url + '?per_page=4&page=' + page)
+            fetch(custom_script_vars.rest_url + '?per_page=8&page=' + page)
                 .then(response => response.json())
                 .then(posts => {
                     if (posts.length > 0) {

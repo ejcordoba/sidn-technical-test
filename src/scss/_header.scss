@@ -9,4 +9,9 @@ header {
   @media (max-width: $layout-breakpoint-mobile) {
     width: 100vw;
   }
+  img {
+    @media (max-width: $layout-breakpoint-mobile) {
+      width: 114px;
+    }
+  }
 }

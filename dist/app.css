@@ -11415,6 +11415,11 @@ header {
     width: 100vw;
   }
 }
+@media (max-width: 375px) {
+  header img {
+    width: 114px;
+  }
+}
 
 .call-to-action-container {
   display: flex;

@@ -53,9 +53,30 @@
         </div>
         <div class="posts-container">
         </div>
+        <div class="posts-container-mobile">
+        </div>
         <div class="load-more-button-row">
             <button class="btn btn-primary" id="load-more-posts">Load More</button>
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script>
+  var postsContainer = document.querySelector('.posts-container-mobile');
+  var hammertime = new Hammer(postsContainer);
+
+  hammertime.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+  hammertime.on('panleft panright', function(ev) {
+    // Disable vertical scroll while swiping horizontally
+    ev.preventDefault();
+    
+    if (ev.type === 'panleft') {
+      postsContainer.scrollLeft += 10; // Adjust scroll sensitivity as needed
+    } else if (ev.type === 'panright') {
+      postsContainer.scrollLeft -= 10; // Adjust scroll sensitivity as needed
+    }
+  });
+</script>
+
 <?php get_footer(); ?>

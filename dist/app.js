@@ -53,15 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   var page = 1;
   var canLoad = true;
-  var container = document.querySelector('.posts-container-mobile');
-  var loadMoreButton = document.getElementById('load-more-posts');
-  function loadInitialPosts() {
+  var containerMobile = document.querySelector('.posts-container-mobile');
+  var loadMoreButtonMobile = document.getElementById('load-more-posts-mobile');
+  function loadInitialPostsMobile() {
     fetch(custom_script_vars.rest_url + '?per_page=8&page=' + page).then(function (response) {
       return response.json();
     }).then(function (posts) {
       if (posts.length > 0) {
         posts.forEach(function (post) {
-          container.insertAdjacentHTML('beforeend', "\n                            <div class=\"card\">\n                                <div class=\"card-header\">\n                                    ".concat(post.featured_media ? "<img class=\"card-img\" src=\"".concat(post.featured_image_src, "\" alt=\"").concat(post.title.rendered, "\">") : '', "\n                                    <div class=\"card-title\">").concat(post.title.rendered, "</div>\n                                </div>\n                                <div class=\"card-body\">\n                                    <div class=\"card-description\">").concat(post.excerpt.rendered, "</div>\n                                    <div class=\"details-button-wrapper\">\n                                        <a href=\"").concat(post.link, "\" class=\"details-button\">Details <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"17\" height=\"7\" viewBox=\"0 0 17 7\" fill=\"none\">\n                                        <path d=\"M16.6112 3.78436L11.6112 0.897611V6.67111L16.6112 3.78436ZM0.5 4.28436H12.1112V3.28436H0.5V4.28436Z\" fill=\"white\"/>\n                                      </svg></a>\n                                    </div>\n                                </div>\n                            </div>\n                        "));
+          containerMobile.insertAdjacentHTML('beforeend', "\n                            <div class=\"card\">\n                                <div class=\"card-header\">\n                                    ".concat(post.featured_media ? "<img class=\"card-img\" src=\"".concat(post.featured_image_src, "\" alt=\"").concat(post.title.rendered, "\">") : '', "\n                                    <div class=\"card-title\">").concat(post.title.rendered, "</div>\n                                </div>\n                                <div class=\"card-body\">\n                                    <div class=\"card-description\">").concat(post.excerpt.rendered, "</div>\n                                    <div class=\"details-button-wrapper\">\n                                        <a href=\"").concat(post.link, "\" class=\"details-button\">Details <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"17\" height=\"7\" viewBox=\"0 0 17 7\" fill=\"none\">\n                                        <path d=\"M16.6112 3.78436L11.6112 0.897611V6.67111L16.6112 3.78436ZM0.5 4.28436H12.1112V3.28436H0.5V4.28436Z\" fill=\"white\"/>\n                                      </svg></a>\n                                    </div>\n                                </div>\n                            </div>\n                        "));
         });
         canLoad = true;
       } else {
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
       return console.error('Error fetching posts:', error);
     });
   }
-  loadInitialPosts();
-  loadMoreButton.addEventListener('click', function () {
+  loadInitialPostsMobile();
+  loadMoreButtonMobile.addEventListener('click', function () {
     if (canLoad) {
       canLoad = false;
       page++;
@@ -81,11 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }).then(function (posts) {
         if (posts.length > 0) {
           posts.forEach(function (post) {
-            container.insertAdjacentHTML('beforeend', "\n                                <div class=\"card\">\n                                    <div class=\"card-header\">\n                                        ".concat(post.featured_media ? "<img class=\"card-img\" src=\"".concat(post.featured_image_src, "\" alt=\"").concat(post.title.rendered, "\">") : '', "\n                                        <div class=\"card-title\">").concat(post.title.rendered, "</div>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <div class=\"card-description\">").concat(post.excerpt.rendered, "</div>\n                                        <div class=\"details-button-wrapper\">\n                                            <a href=\"").concat(post.link, "\" class=\"details-button\">Details -></a>\n                                        </div>\n                                    </div>\n                                </div>\n                            "));
+            containerMobile.insertAdjacentHTML('beforeend', "\n                                <div class=\"card\">\n                                    <div class=\"card-header\">\n                                        ".concat(post.featured_media ? "<img class=\"card-img\" src=\"".concat(post.featured_image_src, "\" alt=\"").concat(post.title.rendered, "\">") : '', "\n                                        <div class=\"card-title\">").concat(post.title.rendered, "</div>\n                                    </div>\n                                    <div class=\"card-body\">\n                                        <div class=\"card-description\">").concat(post.excerpt.rendered, "</div>\n                                        <div class=\"details-button-wrapper\">\n                                            <a href=\"").concat(post.link, "\" class=\"details-button\">Details -></a>\n                                        </div>\n                                    </div>\n                                </div>\n                            "));
           });
           canLoad = true;
         } else {
-          loadMoreButton.style.display = 'none';
+          loadMoreButtonMobile.style.display = 'none';
         }
       })["catch"](function (error) {
         return console.error('Error fetching posts:', error);

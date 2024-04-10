@@ -73,16 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     var page = 1;
     var canLoad = true;
-    var container = document.querySelector('.posts-container-mobile');
-    var loadMoreButton = document.getElementById('load-more-posts');
+    var containerMobile = document.querySelector('.posts-container-mobile');
+    var loadMoreButtonMobile = document.getElementById('load-more-posts-mobile');
 
-    function loadInitialPosts() {
+    function loadInitialPostsMobile() {
         fetch(custom_script_vars.rest_url + '?per_page=8&page=' + page)
             .then(response => response.json())
             .then(posts => {
                 if (posts.length > 0) {
                     posts.forEach(post => {
-                        container.insertAdjacentHTML('beforeend', `
+                        containerMobile.insertAdjacentHTML('beforeend', `
                             <div class="card">
                                 <div class="card-header">
                                     ${post.featured_media ? `<img class="card-img" src="${post.featured_image_src}" alt="${post.title.rendered}">` : ''}
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => console.error('Error fetching posts:', error));
     }
 
-    loadInitialPosts();
+    loadInitialPostsMobile();
 
-    loadMoreButton.addEventListener('click', function () {
+    loadMoreButtonMobile.addEventListener('click', function () {
         if (canLoad) {
             canLoad = false;
             page++;
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(posts => {
                     if (posts.length > 0) {
                         posts.forEach(post => {
-                            container.insertAdjacentHTML('beforeend', `
+                            containerMobile.insertAdjacentHTML('beforeend', `
                                 <div class="card">
                                     <div class="card-header">
                                         ${post.featured_media ? `<img class="card-img" src="${post.featured_image_src}" alt="${post.title.rendered}">` : ''}
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         });
                         canLoad = true;
                     } else {
-                        loadMoreButton.style.display = 'none';
+                        loadMoreButtonMobile.style.display = 'none';
                     }
                 })
                 .catch(error => console.error('Error fetching posts:', error));

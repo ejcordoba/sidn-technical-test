@@ -12014,6 +12014,22 @@ header {
   color: #fff;
   text-align: center;
 }
+.posts-section-container .load-more-button-row #load-more-posts {
+  display: block;
+}
+@media (max-width: 375px) {
+  .posts-section-container .load-more-button-row #load-more-posts {
+    display: none;
+  }
+}
+.posts-section-container .load-more-button-row #load-more-posts-mobile {
+  display: none;
+}
+@media (max-width: 375px) {
+  .posts-section-container .load-more-button-row #load-more-posts-mobile {
+    display: block;
+  }
+}
 
 .content {
   min-height: 1000px;

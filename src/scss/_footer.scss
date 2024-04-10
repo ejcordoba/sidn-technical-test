@@ -8,12 +8,15 @@
   padding: 67px 134px;
   margin-top: auto;
   @media (max-width: $layout-breakpoint-mobile) {
-    height: 10.1875rem;
+    width: 100vw;
+    height: auto;
+    padding: 15px;
   }
   .footer-logo {
     padding-left: 15px;
     @media (max-width: $layout-breakpoint-mobile) {
-      padding-left: 30px;
+      width: 158px;
+      padding-left: 0px;
     }
   }
   .footer-separator {
@@ -38,7 +41,7 @@
     line-height: normal;
     opacity: 0.5;
     @media (max-width: $layout-breakpoint-mobile) {
-      padding-right: 30px;
+      padding-right: 0px;
     }
   }
 }

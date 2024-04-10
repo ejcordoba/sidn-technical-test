@@ -12039,7 +12039,9 @@ header {
 }
 @media (max-width: 375px) {
   .footer {
-    height: 10.1875rem;
+    width: 100vw;
+    height: auto;
+    padding: 15px;
   }
 }
 .footer .footer-logo {
@@ -12047,7 +12049,8 @@ header {
 }
 @media (max-width: 375px) {
   .footer .footer-logo {
-    padding-left: 30px;
+    width: 158px;
+    padding-left: 0px;
   }
 }
 .footer .footer-separator {
@@ -12076,7 +12079,7 @@ header {
 }
 @media (max-width: 375px) {
   .footer .legal-notice-legal-information {
-    padding-right: 30px;
+    padding-right: 0px;
   }
 }
 

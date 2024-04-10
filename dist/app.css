@@ -11428,7 +11428,7 @@ header {
 }
 @media (max-width: 375px) {
   .call-to-action-container {
-    padding: 0 10px;
+    padding: 39px 15px 0 15px;
   }
 }
 .call-to-action-container .call-to-action-left {
@@ -11448,7 +11448,7 @@ header {
 }
 @media (max-width: 375px) {
   .call-to-action-container .call-to-action-left .call-to-action-title .buy-poison {
-    font-size: 58px;
+    font-size: 58.507px;
   }
 }
 .call-to-action-container .call-to-action-left .call-to-action-title .trust-us {
@@ -11467,8 +11467,9 @@ header {
 @media (max-width: 375px) {
   .call-to-action-container .call-to-action-left .call-to-action-title .trust-us {
     font-size: 58.507px;
-    top: -55px;
-    left: 20px;
+    top: -25px;
+    left: 15px;
+    -webkit-text-stroke: 0.5px #ff8882;
   }
 }
 .call-to-action-container .call-to-action-left .call-to-action-description {
@@ -11484,7 +11485,7 @@ header {
 @media (max-width: 375px) {
   .call-to-action-container .call-to-action-left .call-to-action-description {
     width: 345px;
-    margin: 0 15px;
+    margin: 0;
   }
 }
 .call-to-action-container .call-to-action-left .call-to-action-button {
@@ -11541,6 +11542,37 @@ header {
 .call-to-action-container .call-to-action-scrolldown {
   margin-bottom: 25px;
 }
+@media (max-width: 375px) {
+  .call-to-action-container .call-to-action-scrolldown {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 375px) {
+  .call-to-action-container .call-to-action-scrolldown img {
+    width: 20.248px;
+  }
+}
+.call-to-action-container .call-to-action-notice-mobile {
+  display: none;
+}
+@media (max-width: 375px) {
+  .call-to-action-container .call-to-action-notice-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 345px;
+    text-align: right;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+    opacity: 0.7;
+    padding-bottom: 11px;
+  }
+}
 
 .call-to-action-right {
   display: flex;
@@ -11548,6 +11580,11 @@ header {
   justify-content: flex-end;
   align-items: self-end;
   padding-bottom: 31px;
+}
+@media (max-width: 375px) {
+  .call-to-action-right {
+    display: none;
+  }
 }
 .call-to-action-right .call-to-action-image {
   width: 33.75rem;

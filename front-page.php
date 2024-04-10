@@ -15,6 +15,8 @@
             <div class="call-to-action-scrolldown">
                 <img class="baja" src="<?php echo get_template_directory_uri(); ?>/src/img/scrolldown.svg" />
             </div>
+            <div class="call-to-action-notice-mobile"><?php the_field('cta_text_under_image')?></div>
+
         </div>
         <div class="call-to-action-right">
             <img class="call-to-action-image" src="<?php the_field('cta_image')?>" />

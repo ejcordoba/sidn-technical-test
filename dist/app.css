@@ -11568,7 +11568,7 @@ header {
   padding: 0 50px;
   width: 100%;
   height: auto;
-  padding: 100px 50px;
+  padding: 70px 165px;
 }
 .description-container .description-top {
   display: flex;
@@ -11630,7 +11630,8 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 120px;
+  height: 420px;
+  margin-top: 137.07px;
 }
 .description-container .description-bottom .description-bottom-left .description-bottom-shape {
   width: 625px;
@@ -11640,7 +11641,7 @@ header {
   background: #9dbeb9;
   position: relative;
   left: 190px;
-  bottom: 220px;
+  bottom: 270px;
 }
 .description-container .description-bottom .description-bottom-title {
   color: #194350;
@@ -11651,6 +11652,8 @@ header {
   line-height: normal;
 }
 .description-container .description-bottom .description-text {
+  width: 445px;
+  padding-top: 8px;
   color: #194350;
   font-family: Lato;
   font-size: 18px;

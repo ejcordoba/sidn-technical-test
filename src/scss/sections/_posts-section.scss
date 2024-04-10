@@ -59,7 +59,7 @@
           justify-content: flex-start;
           align-items: end;
           padding-left: 10px;
-          color: #194350;
+          color: $primary-color;
           font-family: "Josefin Sans", "sans-serif";
           font-size: 21px;
           font-style: normal;
@@ -71,7 +71,7 @@
       }
       .card-body {
         .card-description {
-          color: #194350;
+          color: $primary-color;
           font-family: Lato;
           font-size: 18px;
           font-style: normal;

@@ -11419,7 +11419,7 @@ header {
 .call-to-action-container {
   display: flex;
   background: #194350;
-  padding: 0 50px;
+  padding: 102px 165px 0 165px;
 }
 @media (max-width: 375px) {
   .call-to-action-container {
@@ -11437,9 +11437,9 @@ header {
   text-align: left;
   font-family: "Josefin Sans", "sans-serif";
   font-size: 120px;
-  line-height: var(--heading-h1-line-height);
-  font-weight: var(--heading-h1-font-weight, 700);
-  font-style: var(--heading-h1-font-style, italic);
+  line-height: normal;
+  font-weight: 700;
+  font-style: italic;
 }
 @media (max-width: 375px) {
   .call-to-action-container .call-to-action-left .call-to-action-title .buy-poison {
@@ -11448,15 +11448,15 @@ header {
 }
 .call-to-action-container .call-to-action-left .call-to-action-title .trust-us {
   position: relative;
-  top: -6.8rem;
-  left: 2rem;
+  top: -50px;
+  left: 35px;
   color: transparent;
   text-align: left;
   font-family: "Josefin Sans", "sans-serif";
   font-size: 120px;
-  line-height: var(--heading-h1-line-height);
-  font-weight: var(--heading-h1-font-weight, 700);
-  font-style: var(--heading-h1-font-style, italic);
+  line-height: normal;
+  font-weight: 700;
+  font-style: italic;
   -webkit-text-stroke: 0.125rem #ff8882;
 }
 @media (max-width: 375px) {
@@ -11467,6 +11467,7 @@ header {
   }
 }
 .call-to-action-container .call-to-action-left .call-to-action-description {
+  width: 386px;
   color: #fff;
   font-family: Lato;
   font-size: 18px;
@@ -11484,9 +11485,10 @@ header {
 .call-to-action-container .call-to-action-left .call-to-action-button {
   display: inline-flex;
   flex-direction: column;
-  width: 16rem;
+  justify-content: center;
+  width: 257px;
+  height: 63px;
   border-radius: 2px;
-  padding: 21px 41px;
   background: rgba(255, 255, 255, 0.8);
   flex-shrink: 0;
   position: relative;
@@ -11496,9 +11498,10 @@ header {
   color: #194350;
   text-align: center;
   font-family: "Josefin Sans", "sans-serif";
-  font-size: var(--heading-caps-h8-font-size, 1.3125rem);
-  line-height: var(--heading-caps-h8-line-height);
-  font-weight: var(--heading-caps-h8-font-weight, 700);
+  font-size: 21px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: 4.095px;
   text-transform: uppercase;
 }
 @media (max-width: 375px) {
@@ -11518,7 +11521,7 @@ header {
   right: -1.4375rem;
   bottom: 0.8125rem;
 }
-.call-to-action-container .call-to-action-left .rrectangle-shape-left {
+.call-to-action-container .call-to-action-left .rectangle-shape-left {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 0.125rem;
   border-style: solid;
@@ -11537,7 +11540,9 @@ header {
 .call-to-action-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  align-items: self-end;
+  padding-bottom: 31px;
 }
 .call-to-action-right .call-to-action-image {
   width: 33.75rem;
@@ -11546,6 +11551,7 @@ header {
      object-fit: cover;
 }
 .call-to-action-right .call-to-action-notice {
+  width: 355px;
   color: #fff;
   text-align: right;
   font-family: Lato;

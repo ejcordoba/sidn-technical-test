@@ -11769,6 +11769,12 @@ header {
   background: linear-gradient(180deg, #ff8882 0%, #ffc2b4 100%);
   padding: 68.26px 165px 52.22px 165px;
 }
+@media (max-width: 375px) {
+  .posts-section-container {
+    width: 100vw;
+    padding: 52px 15px;
+  }
+}
 .posts-section-container .posts-title {
   display: flex;
   flex-direction: column;
@@ -11796,6 +11802,13 @@ header {
   font-weight: 700;
   line-height: normal;
 }
+@media (max-width: 375px) {
+  .posts-section-container .posts-title .our {
+    padding-right: 0;
+    font-size: 57.18px;
+    padding-top: 28.26px;
+  }
+}
 .posts-section-container .posts-title .flavours {
   position: relative;
   top: -45px;
@@ -11808,6 +11821,13 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 375px) {
+  .posts-section-container .posts-title .flavours {
+    padding-right: 0;
+    top: -20px;
+    font-size: 57.18px;
+  }
 }
 .posts-section-container .posts-container {
   display: grid;

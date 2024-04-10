@@ -5,6 +5,10 @@
   align-items: baseline;
   background: linear-gradient(180deg, #ff8882 0%, #ffc2b4 100%);
   padding: 68.26px 165px 52.22px 165px;
+  @media (max-width: $layout-breakpoint-mobile) {
+    width: 100vw;
+    padding: 52px 15px;
+  }
   .posts-title {
     display: flex;
     flex-direction: column;
@@ -30,6 +34,11 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      @media (max-width: $layout-breakpoint-mobile) {
+        padding-right: 0;
+        font-size: 57.18px;
+        padding-top: 28.26px;
+      }
     }
     .flavours {
       position: relative;
@@ -43,6 +52,11 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      @media (max-width: $layout-breakpoint-mobile) {
+        padding-right: 0;
+        top: -20px;
+        font-size: 57.18px;
+      }
     }
   }
   .posts-container {

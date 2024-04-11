@@ -16,7 +16,9 @@
     justify-content: center;
     align-items: flex-end;
     .numbers {
+      width: 100%;
       color: $white;
+      text-align: right;
       font-family: "Josefin Sans", "sans-serif";
       font-size: 27px;
       font-style: italic;
@@ -75,12 +77,13 @@
       padding: 14px 12px;
       @media (max-width: $layout-breakpoint-mobile){
         width:80vw;
-      }
+      }      
       .card-header {
         display: flex;
         flex-direction: row;
         border: 0;
         background: white;
+        
         .card-img {
           width: 37px;
         }
@@ -112,6 +115,10 @@
         .details-button-wrapper {
           display: flex;
           justify-content: flex-end;
+          @media (max-width: $layout-breakpoint-mobile){
+            width: 100%;
+            justify-content: center;
+          }
           .details-button {
             display: flex;
             width: fit-content;
@@ -129,6 +136,10 @@
             font-weight: 700;
             line-height: normal;
             transition: 0.3s;
+            @media (max-width: $layout-breakpoint-mobile) {
+              width: 115px;
+            }
+
           }
           .details-button:hover {
             background: $primary-color;
@@ -160,6 +171,7 @@
         }
         .card-header {
           display: flex;
+          width: 100%;
           flex-direction: row;
           border: 0;
           background: white;
@@ -183,20 +195,25 @@
           }
         }
         .card-body {
+          width: 100%;
           .card-description {
+            width: 100%;
             color: $primary-color;
+            text-overflow: ellipsis;
             font-family: Lato;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             p {
+              width: 100%;
               text-overflow: ellipsis;
-    overflow: hidden;
+              overflow: hidden;
             }
           }
           .details-button-wrapper {
             display: flex;
+            width: 100%;
             justify-content: flex-end;
             .details-button {
               display: flex;
@@ -215,6 +232,9 @@
               font-weight: 700;
               line-height: normal;
               transition: 0.3s;
+              svg {
+                width: 20px;
+              }
             }
             .details-button:hover {
               background: $primary-color;
@@ -234,6 +254,9 @@
     background: #ff8882;
     color: $white;
     text-align: center;
+    @media(max-width: $layout-breakpoint-mobile){
+      width: 50%;
+    }
     #load-more-posts{
       display:block;
       @media(max-width: $layout-breakpoint-mobile){
